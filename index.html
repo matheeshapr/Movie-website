@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Movie Search</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎬 Movie Search</h1>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Enter movie name (e.g., Batman)">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+
+        <div id="loading" class="loading hidden">Searching for movies...</div>
+        <div id="error" class="error hidden"></div>
+
+        <div id="movieContainer" class="movie-container"></div>
+    </div>
+
+    <!-- Movie Details Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div id="movieDetails"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
