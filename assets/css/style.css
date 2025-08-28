@@ -104,6 +104,56 @@ nav {
     margin-bottom: 3rem;
 }
 
+.movie-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-post {
+    background: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.no-poster {
+    width: 200px;
+    height: 300px;
+    background: #555;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.movie-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff6b35;
+}
+
+.movie-year {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.detail-info p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.detail-info strong {
+    color: #ff6b35;
+    margin-right: 5px;
+}
+
 .movie-card {
     background: #333;
     border-radius: 8px;
@@ -123,27 +173,6 @@ nav {
     justify-content: center;
     font-size: 3rem;
     color: rgba(255, 255, 255, 0.8);
-}
-
-.movie-info {
-    padding: 1rem;
-}
-
-.movie-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.movie-details {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.movie-rating {
-    color: #ffd700;
-    font-weight: bold;
 }
 
 .watch-btn {
