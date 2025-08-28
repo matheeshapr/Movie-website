@@ -1,37 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Movie Search</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>MovieHub - Simple Cinema</title>
+   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">MovieHub</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#genres">Genres</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>🎬 Movie Search</h1>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Enter movie name (e.g., Batman)">
-            <button onclick="searchMovies()">Search</button>
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for movies..." id="searchInput">
+                <button class="search-btn" onclick="searchMovies()">Search</button>
+            </div>
         </div>
 
-        <div id="loading" class="loading hidden">Searching for movies...</div>
-        <div id="error" class="error hidden"></div>
+        <!-- Search Results -->
+        <div id="movieContainer"></div>
 
-        <div id="movieContainer" class="movie-container"></div>
+        <!-- Featured Movies -->
+        <section id="movies">
+            <h2 class="section-title">Featured Movies</h2>
+            <div class="movies-grid" id="moviesGrid">
+                <div class="movie-card">
+                    <div class="movie-poster">🎬</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Action Hero</div>
+                        <div class="movie-details">2024 • Action • 2h 15m</div>
+                        <div class="movie-rating">★ 8.5</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🎭</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Comedy Night</div>
+                        <div class="movie-details">2024 • Comedy • 1h 45m</div>
+                        <div class="movie-rating">★ 7.8</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🚀</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Space Adventure</div>
+                        <div class="movie-details">2024 • Sci-Fi • 2h 30m</div>
+                        <div class="movie-rating">★ 9.2</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">👻</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Horror House</div>
+                        <div class="movie-details">2024 • Horror • 1h 55m</div>
+                        <div class="movie-rating">★ 7.3</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">💎</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Drama Story</div>
+                        <div class="movie-details">2024 • Drama • 2h 05m</div>
+                        <div class="movie-rating">★ 8.9</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🏎️</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Fast Race</div>
+                        <div class="movie-details">2024 • Action • 1h 50m</div>
+                        <div class="movie-rating">★ 8.1</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🌟</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Family Fun</div>
+                        <div class="movie-details">2024 • Family • 1h 35m</div>
+                        <div class="movie-rating">★ 7.9</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🗡️</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Medieval Quest</div>
+                        <div class="movie-details">2024 • Fantasy • 2h 20m</div>
+                        <div class="movie-rating">★ 8.7</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Movies -->
+        <section>
+            <h2 class="section-title">Popular This Week</h2>
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <div class="movie-poster">🎯</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Target Mission</div>
+                        <div class="movie-details">2024 • Thriller • 2h 10m</div>
+                        <div class="movie-rating">★ 8.3</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🌊</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Ocean Deep</div>
+                        <div class="movie-details">2024 • Adventure • 1h 58m</div>
+                        <div class="movie-rating">★ 7.6</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🔥</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Fire Storm</div>
+                        <div class="movie-details">2024 • Action • 2h 25m</div>
+                        <div class="movie-rating">★ 8.8</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster">🎵</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Music Dreams</div>
+                        <div class="movie-details">2024 • Musical • 2h 00m</div>
+                        <div class="movie-rating">★ 8.0</div>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- Movie Details Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <div id="movieDetails"></div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
         </div>
-    </div>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
 
     <script src="assets/js/app.js"></script>
 </body>
-
 </html>
