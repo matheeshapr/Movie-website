@@ -8,7 +8,8 @@ let movieContainer = document.getElementById('movieContainer');
 //Search Movie 
 async function searchMovies() {
     let movieName = searchInput.value.trim();
-    let url = `${API_URL}?apikey=${API_KEY}&t=${encodeURIComponent(movieName)}`;
+
+    let url = API_URL + '?apikey=' + API_KEY + '&t=' + movieName;
     
         let response = await fetch(url);
         let data = await response.json();
