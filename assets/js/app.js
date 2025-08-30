@@ -10,15 +10,15 @@ async function searchMovies() {
     let movieName = searchInput.value.trim();
 
     let url = API_URL + '?apikey=' + API_KEY + '&t=' + movieName;
-    
-        let response = await fetch(url);
-        let data = await response.json();
-        
-        if (data.Response === 'True') {
-            displayMovie(data);
-        } else {
-            movieContainer.innerHTML = '<p>No movie found! Try a different name.</p>';
-        }
+
+    let response = await fetch(url);
+    let data = await response.json();
+
+    if (data.Response === 'True') {
+        displayMovie(data);
+    } else {
+        movieContainer.innerHTML = '<p>No movie found! Try a different name.</p>';
+    }
 }
 
 // Movie display 
